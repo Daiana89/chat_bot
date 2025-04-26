@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Chatbot con Gemini</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chatbot con Gemini</h1>
+    <form method="POST">
+        <textarea name="user_input" placeholder="Escribe tu pregunta aquí..." required></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if response %}
+    <div class="response">
+        <strong>Respuesta del chatbot:</strong><br>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
